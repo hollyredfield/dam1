@@ -1,0 +1,17 @@
+import random
+
+# Generate a random number in the range of 1 to 20
+random_number = random.randint(1, 20)
+
+# Print the random number
+print("Random Number:", random_number)
+
+# Calculate the results after adding +1, +2, and +3 without exceeding 20
+result_add_1 = min(random_number + 1, 20)
+result_add_2 = min(random_number + 2, 20)
+result_add_3 = min(random_number + 3, 20)
+
+# Print the results
+print("Result after adding +1:", result_add_1)
+print("Result after adding +2:", result_add_2)
+print("Result after adding +3:", result_add_3)
