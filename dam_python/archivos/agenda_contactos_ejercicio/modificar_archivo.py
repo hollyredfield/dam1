@@ -1,19 +1,74 @@
-#Tener un menú, añadir con contacto, viualizar, eliminar y salir
-#nombre sea input, y teléfono, concantenar, para escribir o añadir nuevo contacto.
-contacto= []
-def menu ():
-    print("1. Añadir Contacto: ")
-    print("2. Visualizar Contacto: ")
-    print("3. Eliminar Contacto: ")
-    print("4. Salir")
-    option= input("Elige una opción: ")
-    return (int(option))
-#módu
-def anadircontacto(contacto):
+contactos = []
+
+def menu():
+    print("\n1. Añadir Contacto")
+    print("\n2. Visualizar Contacto")
+    print("\n3. Eliminar Contacto")
+    print("\n4. Salir")
+    opcion = int(input(f"\nElige una opcion : "))
+    return opcion
+
+
+def anadircontactos(contactos):
+    nombre = input("\nPorfavor añade un nombre : ")
+    telefono = input("\nPorfavor añade un numero de telefono : ")
+    with open("agenda.txt") as archivo:
+        archivo.write(nombre +',' + telefono)
+        print(f"Contacto {nombre} añadido correctamente")
+    return contactos
+
+
+def visualizar_contactos(contactos):
+    try:
+        with open("agenda.txt") as archivo:
+            lineas = archivo.readlines()
+            for linea in lineas: 
+                nombre, telefono = linea.strip().split(',')
+                print(f"Nombre {nombre} - Telefono {telefono}")
+    except FileNotFoundError:
+        print(f"La agenda de contacto parece estar vacia")
+    return
+        
+        
+
+def eliminar_contacto(contactos):
+    nombre_a_eliminar = input("Introduce el nombre del contacto que deseas eliminar : ")
+    contactos = []
+    eliminado = False
     
-def visualizarcontacto(contacto):
-    
-def eliminarcontacto(contacto):
-    #programa pincipal
+    try:
+        with open("agenda.txt") as archivo:
+            lineas = archivo.readlines()
+            for linea in lineas:
+                nombre, numero = linea.strip().split()
+                if nombre in nombre_a_eliminar:
+                    contactos.append({nombre, numero})
+                else:
+                    eliminado = True
+                    
+            if eliminado:
+                with open("agenda.txt") as archivo:
+                    for contacto in contactos: 
+                        archivo.write(contacto[0]+ ','+ contacto[1])
+    except FileNotFoundError:                    
+            
+    return contactos
+
+
+
 while True:
+    opcion = menu()
+
+    if opcion == 1:
+        contactos = anadircontactos(contactos)
+    elif opcion == 2:
+        visualizar_contactos()
+    elif opcion == 3:
+        contactos = eliminar_contacto(contactos)
+    elif opcion == 4:
+        print(f"\nHASTA LUEGO")
+        break
+    else:
+        print(f"\nOpcion Incorrecta")
+    
     
