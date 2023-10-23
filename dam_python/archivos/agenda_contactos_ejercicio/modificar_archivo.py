@@ -1,3 +1,5 @@
+#hay que crear un menú para que el usuario elija la opción de añadir, ver, eliminar contacto y si squiere salir también.
+#por cada opción de añadir, ver     
 contactos = []
 
 def menu():
