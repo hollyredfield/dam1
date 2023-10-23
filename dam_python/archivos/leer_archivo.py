@@ -15,13 +15,16 @@ with open('frutas.txt', 'r') as archivo:
     print('\nEsta es la lista llamada lista:', lista)
 archivo.close()  # Cierra el archivo correctamente
  """
- lista = [] 
- frutas = []    # Inicializa la lista
+lista = []  # Inicializa la lista
 with open('frutas.txt', 'r') as archivo:
     frutas = archivo.readlines()
-    #frutas = [fruta.strip() for fruta in frutas]
     for fruta in frutas:
         lista.append(fruta.strip())
-    #print(frutas)
     print('\nEsta es la lista llamada lista:', lista)
-archivo.close()  # Cierra el archivo correctamente
+#modificar un archivo que contenga una lista
+""" 
+with open('frutas.txt', 'r') as archivo:
+    frutas = archivo.read()
+    print(frutas)
+    for fruta in frutas 
+    """
