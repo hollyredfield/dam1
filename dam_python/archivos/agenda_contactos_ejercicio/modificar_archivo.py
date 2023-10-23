@@ -1,5 +1,6 @@
 #hay que crear un menú para que el usuario elija la opción de añadir, ver, eliminar contacto y si squiere salir también.
-#por cada opción de añadir, ver     
+#por cada opción de añadir, ver y visualuzar, ha de ser una función. Añadir y eliminar contactos, trabaja con una lista vacía
+#llamada contactos. Cuando el usuario elija una opción, se ejecuta la función correspondiente en el progrma principal.
 contactos = []
 
 def menu():
@@ -13,8 +14,8 @@ def menu():
 def anadircontactos(contactos):
     nombre = input("\nPor favor añade un nombre : ")
     telefono = input("\nPor favor añade un numero de teléfono : ")
-    with open("agenda.txt", "a") as archivo:  # Open in append mode
-        archivo.write(nombre + ',' + telefono + '\n')  # Add '\n' to separate contacts
+    with open("agenda.txt", "a") as archivo:  # como estamos añadiendo, se pone en modo append.
+        archivo.write(nombre + ',' + telefono + '\n')  #Se añade '\n' para separar los contactos.
         print(f"Contacto {nombre} añadido correctamente")
     return contactos
 
@@ -34,7 +35,7 @@ def eliminar_contacto(contactos):
     nuevos_contactos = []
 
     try:
-        with open("agenda.txt", "r") as archivo:  # Open in read mode
+        with open("agenda.txt", "r") as archivo:  # lo abre en modo lectura
             lineas = archivo.readlines()
             for linea in lineas:
                 nombre, numero = linea.strip().split(',')
@@ -42,7 +43,7 @@ def eliminar_contacto(contactos):
                     nuevos_contactos.append(nombre + ',' + numero + '\n')
 
         if eliminado:
-            with open("agenda.txt", "w") as archivo:  # Open in write mode
+            with open("agenda.txt", "w") as archivo:  # lo abre en modo escritura.
                 archivo.writelines(nuevos_contactos)
     except FileNotFoundError:
         pass
