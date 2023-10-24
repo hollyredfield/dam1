@@ -34,31 +34,29 @@ def verdiario():
 
 
 def eliminar(diario):
-    nombre_a_eliminar = input("Introduce la fecha de la entrada que quieres eliminar: ")
+    nombre_a_eliminar= input("Introduce la fecha de la entrada que quieres eliminar: ")
     eliminado = False
-    nuevo_diario = []
+    nuevo_diario= []
 
     try:
         with open("diario.txt", "r") as file:
             lineas = file.readlines()
             for linea in lineas:
                 fecha, anecdota = linea.strip().split(";")
-                if fecha != nombre_a_eliminar:
-                    nuevo_diario.append(fecha + ";" + anecdota + "\n")
-                else:
-                    eliminado = True
+            if fecha != nombre_a_eliminar:
+                nuevo_diario.append(fecha +";" +anecdota + "\n")
+            else:   
+                eliminado= True
         if eliminado:
             with open("diario.txt", "w") as file:
                 for entrada in nuevo_diario:
-                    file.write(entrada)
-            print("Entrada eliminada correctamente.")
+                    file.write(entrada[0] + ";" + entrada[1] + "\n")
         else:
             print("La fecha no se encuentra disponible.")
 
     except FileNotFoundError:
         print("Error")
     return diario
-
     
 def menu():
     print("1. Agregar entrada al diario.")
