@@ -2,27 +2,28 @@
 #para ello, hay que crear una función de meter una entrada del diario, ver, eliminar y salir del programa.
 #para agregar una entrada debemos pedirle al usuario la fecha y una anécdota y crear un diario.txt e itroduccir lo que
 #escriba el usuario.
-def agregar():
+diario=[]
+def agregar(diario):
     fecha = input("Dime la fecha:")
     anecdota = input("Cuéntame una anécdota: ")
-    diario= []
+
     try:
         with open("diario.txt", "a") as file:
-            lineas = archivo.readlines()
-            for linea in lineas:
-                fecha, anecdota = linea.strip().slipt(";")
-                diario.append(fecha + anecdota)
-                                
-           
-                
-                
+            file.write(fecha + "," +  anecdota)
+            print(f"{fecha} agregada correctamente")
+            
+                        
     except FileNotFoundError:
         print("error")
     return diario
+agregar(diario)
 
-     
+  
 def verdiario():
-    try:
+    try open("diario.txt", "r") as file:
+        lineas = file.readlines()
+        for linea in lineas:
+            
         
         
         
@@ -32,7 +33,7 @@ def verdiario():
     except FileNotFoundError:
         print("Error")
     
-def eliminar():
+""" def eliminar():
     
 def menu():
     print("1. Agregar entrada al diario.")
@@ -51,5 +52,5 @@ while True:
     elif option == 4:
         print("Chao Pescao'. ")
         break
-    
-    
+     """
+   
