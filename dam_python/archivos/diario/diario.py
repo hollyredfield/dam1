@@ -9,31 +9,54 @@ def agregar(diario):
 
     try:
         with open("diario.txt", "a") as file:
-            file.write(fecha + "," +  anecdota)
+            file.write(fecha + ";" +  anecdota + "\n")
             print(f"{fecha} agregada correctamente")
             
                         
     except FileNotFoundError:
         print("error")
     return diario
-agregar(diario)
+
 
   
 def verdiario():
-    try open("diario.txt", "r") as file:
-        lineas = file.readlines()
-        for linea in lineas:
-            
-        
-        
-        
-        
-        
-        
+    try:
+        with open("diario.txt", "r") as file:
+            lineas = file.readlines()
+            for linea in lineas:
+               fecha, anecdota = linea.strip().split(";")
+               print(f"fecha: {fecha} anecdota: {anecdota}")
+                
+                
+    except FileNotFoundError:
+        print("Está vacío.")
+
+
+
+def eliminar(diario):
+    nombre_a_eliminar= input("Introduce la fecha de la entrada que quieres eliminar: ")
+    eliminado = False
+    nuevo_diario= []
+
+    try:
+        with open("diario.txt", "r") as file:
+            lineas = file.readlines()
+            for linea in lineas:
+                fecha, anecdota = linea.strip().split(";")
+            if fecha != nombre_a_eliminar:
+                nuevo_diario.append(fecha +";" +anecdota)
+            else:   
+                eliminado= True
+        if eliminado:
+            with open("diario.txt", "w") as file:
+                for entrada in nuevo_diario:
+                    file.write(entrada[0] + ";" + entrada[1])
+        else:
+            print("La fecha no se encuentra disponible.")
+
     except FileNotFoundError:
         print("Error")
-    
-""" def eliminar():
+    return diario
     
 def menu():
     print("1. Agregar entrada al diario.")
@@ -44,13 +67,13 @@ def menu():
     return (int(option))
     
 while True:
-    ver = menu()
+    option = menu()
     if option == 1:
-        anadir == agregar()
+        anadir= agregar(diario)
     elif option == 2:
-        ver = verdiario()
+        verdiario()
+    elif option == 3:
+        erase = eliminar(diario)
     elif option == 4:
-        print("Chao Pescao'. ")
+        print("Gracias por usar el programa: ")
         break
-     """
-   
