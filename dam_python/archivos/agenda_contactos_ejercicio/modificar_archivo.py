@@ -41,12 +41,15 @@ def eliminar_contacto(contactos):
                 nombre, numero = linea.strip().split(',')
                 if nombre != nombre_a_eliminar:
                     nuevos_contactos.append(nombre + ',' + numero + '\n')
+                else:
+                    eliminado = True  # Set eliminado to True when the contact is found and removed.
 
         if eliminado:
             with open("agenda.txt", "w") as archivo:  # lo abre en modo escritura.
                 archivo.writelines(nuevos_contactos)
     except FileNotFoundError:
         pass
+
 
 while True:
     opcion = menu()
