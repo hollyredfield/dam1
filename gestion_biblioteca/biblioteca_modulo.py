@@ -76,10 +76,11 @@ def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de
             for lines in line:
                 try:
                     libro,autor,year,genre = lines.strip().split(",")
-                    if libro != titulo:
+                    if titulo not in lines:
                         biblioteca.append(f"{libro}, {autor}, {year}, {genre} \n")
                     else:
                         eliminado = True
+                        
                 except ValueError:
                     print(f"{lines}")
         if eliminado: 
