@@ -24,7 +24,12 @@ El programa debe manejar posibles errores, como intentar prestar un libro que ya
 o buscar un libro que no existe en la biblioteca.
  """
  #ha de haber dos ficheros de textos, uno de los libros y otro de los prestados
- def agregarunlibro(): #Agregar un libro: Cada libro debe tener un título, autor, año de publicación y género
+def agregarunlibro(): #Agregar un libro: Cada libro debe tener un título, autor, año de publicación y género
+    with open("libros.txt", "a") as file:
+        libros = file.readlines()
+        for libro in libros:
+            
+        
 def visualizarlibro():#Visualizar todos los libros: Mostrar una lista de todos los libros en la biblioteca
 def buscarlibro():#Buscar un libro por título o autor: Permitir al usuario buscar un libro específico
 def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
