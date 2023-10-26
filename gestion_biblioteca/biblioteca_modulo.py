@@ -28,20 +28,23 @@ def agregarunlibro():#Agregar un libro: Cada libro debe tener un título, autor,
     try:
         libro = input("Dime el título del libro que quieras añadir a la biblioteca: ")
         autor = input("dime el autor del libro: ")
-        year = int(input("Dime el año de publicación: "))
+        year = input("Dime el año de publicación: ")
         genre = input("Dime el género al que pertenece: ")
         with open("libros.txt", "a") as file:
-            file.write("Título:" +  libro + "," + autor + "," + year+ "," + genre )
+            file.write("Título: " +  libro + ", "+ "Autor: " + autor + ", "+ "Año: " + year+ ", "+ "Género: " + genre+ "\n" )
             print(f"{libro} agregado correctamente")
     except FileNotFoundError:
         print("Error")
     return        
 agregarunlibro()
       
-#def visualizarlibro():#Visualizar todos los libros: Mostrar una lista de todos los libros en la biblioteca
-    #try:
-        #with open("libros.txt", "r") as file:
-            #read = file.readlines()
+""" def visualizarlibro():#Visualizar todos los libros: Mostrar una lista de todos los libros en la biblioteca
+    try:
+        with open("libros.txt", "r") as file:
+            read = file.readlines() """
+            
+            
+            
 #def buscarlibro():#Buscar un libro por título o autor: Permitir al usuario buscar un libro específico
 #def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
 #def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
