@@ -1,1 +1,1 @@
-Título: lola,   Autor: druck,   Año: 1999,   Género: terror 
+Título: lola,    Autor: druck,    Año: 1999,    Género: terror 
