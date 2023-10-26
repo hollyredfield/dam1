@@ -67,7 +67,33 @@ def buscarlibro():#Buscar un libro por título o autor: Permitir al usuario busc
         print("Libro No disponible: ")   
     
 def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
-    titulo = 
+    titulo = input("Dime el libro que quieres eliminar de la biblioteca: ")
+    eliminado = False
+    biblioteca = []
+    try:
+        with open("libros.txt", "r") as file:
+            line = file.readlines()
+            for lines in line:
+                try:
+                    libro,autor,year,genre = lines.strip().split(",")
+                    if libro != titulo:
+                        biblioteca.append(f"{libro}, {autor}, {year}, {genre} \n")
+                    else:
+                        eliminado = True
+                except ValueError:
+                    print(f"{lines}")
+        if eliminado: 
+            with open ("libros.txt", "w") as file:
+                for libro in biblioteca:
+                    file.write(libro)
+            print("Libro eliminado correctamente")
+        else:
+            print("El libro indicado no se encentra disponible.")
+                
+                
+    except FileNotFoundError:
+        print("Error")
+    return        
 #def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
 #def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devuelto
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
@@ -94,11 +120,3 @@ while True:
         buscarlibro()
     elif option == 4:
         eliminarlibro()
-    elif option == 5:
-        prestarlibro()
-    elif option == 6:
-        devolverlibro()
-    elif option == 7:
-        visualizarlibrosprestados()
-    elif option == 8:
-        break 
