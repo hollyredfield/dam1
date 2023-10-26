@@ -36,19 +36,69 @@ def agregarunlibro():#Agregar un libro: Cada libro debe tener un título, autor,
     except FileNotFoundError:
         print("Error")
     return        
-agregarunlibro()
+#agregarunlibro()
+
       
-""" def visualizarlibro():#Visualizar todos los libros: Mostrar una lista de todos los libros en la biblioteca
+def visualizarlibro():#Visualizar todos los libros: Mostrar una lista de todos los libros en la biblioteca
     try:
         with open("libros.txt", "r") as file:
-            read = file.readlines() """
-            
-            
-            
-#def buscarlibro():#Buscar un libro por título o autor: Permitir al usuario buscar un libro específico
-#def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
+            read = file.readlines() 
+            for linea in read:
+                try:
+                    libro, autor, year, genre = linea.strip().split(",")
+                    print(f"{libro} - {autor} - {year} - {genre}")
+                except ValueError:
+                    print(f"{linea}")
+    except FileNotFoundError:
+        print("Libro no disponible.")     
+    return 
+#visualizarlibro()  
+
+
+def buscarlibro():#Buscar un libro por título o autor: Permitir al usuario buscar un libro específico
+    titulo = input("Dime el libro que quieres buscar: ")
+    try:
+        with open("libros.txt", "r") as file:
+            libros = file.readlines()
+            for libro in libros:
+                if titulo in libro:
+                    print(f"El libro {titulo} está disponible")
+    except FileNotFoundError:
+        print("Libro No disponible: ")   
+    
+def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
+    titulo = 
 #def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
 #def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devuelto
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
-
+def menu():
+    print("1. Agregar un libro: ")
+    print("2. Ver libros disponibles: ")
+    print("3. Buscar libro: ")
+    print("4. Eliminar libros: ")
+    print("5. Prestar libro: ")
+    print("6. Devolver Libro: ")
+    print("7. Visualizar libros prestados: ")
+    print("8. Salir: ")
     
+    option= input("elige una opción de forma numérica: ")
+    return (int(option))
+
+while True:
+    option = menu()
+    if option == 1:
+        agregarunlibro()
+    elif option == 2:
+        visualizarlibro()
+    elif option == 3:
+        buscarlibro()
+    elif option == 4:
+        eliminarlibro()
+    elif option == 5:
+        prestarlibro()
+    elif option == 6:
+        devolverlibro()
+    elif option == 7:
+        visualizarlibrosprestados()
+    elif option == 8:
+        break 
