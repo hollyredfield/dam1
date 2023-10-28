@@ -98,17 +98,26 @@ def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de
 def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
     libro = input("Dime el libro que quieres llevarte: ")
     name = input("Dime tu nombre: ")
+    disponible= False
+    almacenado = []
     try:
         with open("libros.txt", "r") as file:
             lines= file.readlines()
             for line in lines:
-                try:
+                if libro in line:
+                    disponible= True
+                    print(f"El {libro} ha sido prestado por {name}")
+                    almacenado.append(line)
+            if not disponible:
+                print(f"El {libro} no se encuentra disponible.")
                     
+        with open("libros.txt", "w") as file:
+            for lines in almacenado:
+                file.write(lines)
+        with open("librosprestados.txt", "a") as prestado:
+            prestado.write(f"{libro} -- {name} \n")            
                     
-                    
-                except ValueError:
-                    print("Error")
-        
+   
         
         
     except FileNotFoundError:
@@ -142,3 +151,5 @@ while True:
         buscarlibro()
     elif option == 4:
         eliminarlibro()
+    elif option == 5:
+        prestarlibro()
