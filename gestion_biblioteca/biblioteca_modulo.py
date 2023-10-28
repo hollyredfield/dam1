@@ -149,7 +149,18 @@ def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devue
                 files.write(f"{libro}\n")
     except FileNotFoundError:
         print("Error")
-#def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
+def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
+    try:
+        with open("librosprestados.txt", "r") as file:
+            lines = file.readlines()
+            for line in lines:
+                try:
+                    libro, name = line.strip().split(",")
+                    print(f"{libro} - {name}")
+                except ValueError:
+                    print(f"{line}")
+    except FileNotFoundError:
+        print("Error al mostrar el contenido")
 def menu():
     print("1. Agregar un libro: ")
     print("2. Ver libros disponibles: ")
@@ -177,3 +188,8 @@ while True:
         prestarlibro()
     elif option == 6:
         devolverlibro()
+    elif option == 7:
+        visualizarlibrosprestados()
+    elif option == 8:
+        print("Chao', Pescao'")
+        break
