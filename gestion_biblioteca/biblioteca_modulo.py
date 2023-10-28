@@ -115,7 +115,7 @@ def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestad
             for lines in almacenado:
                 file.write(lines)
         with open("librosprestados.txt", "a") as prestado:
-            prestado.write(f"{libro} -- {name} \n")            
+            prestado.write(f"{libro} en posesión de {name} \n")            
                     
    
         
@@ -140,13 +140,14 @@ def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devue
                     prestados.append(line)
             if not disponible:
                 print(f"El {libro} no se encuentra disponible.")
-       
+        with open ("librosprestados.txt", "w") as files:
+            for this in prestados:
+                files.write(this)
         with open("libros.txt", "a") as files:
             for those in prestados:
                 files.write(those)
     except FileNotFoundError:
         print("Error")
-
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
 def menu():
     print("1. Agregar un libro: ")
