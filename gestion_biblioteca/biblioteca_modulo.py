@@ -126,7 +126,26 @@ def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestad
     
     
     
-#def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devuelto
+def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devuelto
+    libro = input("Dime el libro que quieres devolver: ")
+    disponible = False
+    prestados= []
+    try:
+        with open("librosprestados.txt", "r") as file:
+            lines= file.readlines()
+            for line in lines:
+                if libro in line:
+                    disponible = True
+                    print(f"El libro {libro} se puede devolver.")
+                    prestados.append(line)
+            if not disponible:
+                print(f"El {libro} no se encuentra disponible.")
+        with open ("librosprestados.txt", "w") as files:
+            for this in prestados:
+                files.write(this)
+    except FileNotFoundError:
+        print("Error")
+
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
 def menu():
     print("1. Agregar un libro: ")
@@ -153,3 +172,5 @@ while True:
         eliminarlibro()
     elif option == 5:
         prestarlibro()
+    elif option == 6:
+        devolverlibro()
