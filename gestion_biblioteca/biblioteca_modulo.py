@@ -95,11 +95,28 @@ def eliminarlibro():#Eliminar un libro: Permitir al usuario eliminar un libro de
     except FileNotFoundError:
         print("Error")
     return        
-def prestarlibro():
+def prestarlibro():#Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
+    libro = input("Dime el libro que quieres llevarte: ")
+    name = input("Dime tu nombre: ")
+    try:
+        with open("libros.txt", "r") as file:
+            lines= file.readlines()
+            for line in lines:
+                try:
+                    
+                    
+                    
+                except ValueError:
+                    print("Error")
+        
+        
+        
+    except FileNotFoundError:
+        print("El libro que quieres llevarte no está disponible: ")
     
     
     
-    #Prestar un libro: Registrar cuándo un libro ha sido prestado y a quién debe estar en un fichero de prestar libros
+    
 #def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devuelto
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
 def menu():
