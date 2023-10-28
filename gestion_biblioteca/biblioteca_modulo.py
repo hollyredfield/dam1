@@ -143,6 +143,9 @@ def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devue
         with open ("librosprestados.txt", "w") as files:
             for this in prestados:
                 files.write(this)
+        with open("libros.txt", "a") as files:
+            for those in prestados:
+                files.write(those)
     except FileNotFoundError:
         print("Error")
 
