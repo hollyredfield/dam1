@@ -137,6 +137,7 @@ def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devue
                 if libro in line:
                     disponible = True
                     print(f"El libro {libro} se puede devolver.")
+                
                     prestados.append(line)
             if not disponible:
                 print(f"El {libro} no se encuentra disponible.")
@@ -144,8 +145,8 @@ def devolverlibro():#Devolver un libro: Registrar cuándo un libro ha sido devue
             for this in prestados:
                 files.write(this)
         with open("libros.txt", "a") as files:
-            for those in prestados:
-                files.write(those)
+            
+                files.write(f"{libro}\n")
     except FileNotFoundError:
         print("Error")
 #def visualizarlibrosprestados():#Mostrar una lista de todos los libros que están prestados y quién los tiene. Debe estar en un fichero de prestar libros 
