@@ -1,3 +1,0 @@
-Título: hush-hush, Autor: becca, Año: 2010, Género: terror
-hush-hush
-/home/codespace/.python/current/bin/python3 /workspaces/dam1/agenda.py/alejandro_py_diario.py
