@@ -66,32 +66,33 @@ def buscarpelicula():
         print("Error")            
                     
 
-def eliminarpelicula(): 
-    pelicula = input("Dime el nombre de la película que deseas eliminar: ")
-    peliculas = []
+def eliminarpelicula():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
+    titulo = input("Dime la película que quieres arreglar: ")
     eliminado = False
+    peliculas = []
     try:
-        with open("peliculas.txt","r") as file:
-            lines = file.readlines()
-            for line in lines:
+        with open("peliculas.txt", "r") as file:
+            line = file.readlines()
+            for lines in line:
                 try:
-                    if pelicula not in line:
-                        peliculas.append(f"{titulo},{direccion},{duracion},{clasificacion} \n")
+                    titulo,director,duracion,clasificacion = lines.strip().split(",")
+                    if titulo not in lines:
+                        peliculas.append(f"{titulo}, {director}, {duracion}, {clasificacion} \n")
                     else:
                         eliminado = True
+                        
                 except ValueError:
-                    print(f"{line}")
-        if eliminado:
+                    print(f"{lines}")
+        if eliminado: 
             with open ("peliculas.txt", "w") as file:
                 for films in peliculas:
                     file.write(films)
-                    print("Eliminado Correctamente.")
+            print("Libro eliminado correctamente")
         else:
-                print("No se pudo eliminar")
-                        
+            print("El libro indicado no se encentra disponible.")
     except FileNotFoundError:
         print("Error")
- 
+    return           
 def menu():
     print("Elige una opción de las siguientes:")
     print("1. Añadir película. ")
@@ -99,5 +100,19 @@ def menu():
     print("3 Buscar película")
     print("4. Eliminar película")
     print("5. Salir")
-    option = input("Dime qué quieres hacer.")
+    option = input("Dime qué quieres hacer: ")
     return (int(option))
+
+while True:
+    option = menu()
+    if option == 1:
+        agregarpelicula()
+    elif option ==2:
+        visualizarpelicula()
+    elif option == 3:
+        buscarpelicula()
+    elif option ==4:
+        eliminarpelicula()
+    elif option == 5:
+        print("Goodbye, Nerd")
+        break 
