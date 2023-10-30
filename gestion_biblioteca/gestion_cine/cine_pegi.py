@@ -36,14 +36,14 @@ def agregarpelicula():#Agregar una película: Cada película debe tener un títu
     return
     
 
-def visualizarpelicula():
+def visualizarpelicula():#Visualizar todas las películas: Mostrar una lista de todas las películas disponibles en el cine.
     try:
         with open("peliculas.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
                 try:
                     titulo,director,duracion,clasificacion = line.strip().split(",")
-                    print(f"{titulo} - {director} - {duracion} - {clasificacion} \n")
+                    print(f"{titulo} - {director} - {duracion} - {clasificacion} ")
                 
                 except ValueError:
                     print(f"{line}")
@@ -52,7 +52,7 @@ def visualizarpelicula():
         print("Error")   
     return
 
-def buscarpelicula():
+def buscarpelicula():#Buscar una película por título o director: Permitir al usuario buscar una película específica.
     pelicula = input("Dime el título de la película que quieres buscar:")
     try:
         with open("peliculas.txt","r") as file:
@@ -67,7 +67,7 @@ def buscarpelicula():
                     
 
 def eliminarpelicula():#Eliminar un libro: Permitir al usuario eliminar un libro de la biblioteca
-    titulo = input("Dime la película que quieres arreglar: ")
+    titulo = input("Dime la película que quieres eliminar: ")
     eliminado = False
     peliculas = []
     try:
@@ -84,12 +84,12 @@ def eliminarpelicula():#Eliminar un libro: Permitir al usuario eliminar un libro
                 except ValueError:
                     print(f"{lines}")
         if eliminado: 
-            with open ("peliculas.txt", "w") as file:
+            with open("peliculas.txt", "w") as file:
                 for films in peliculas:
-                    file.write(films)
-            print("Libro eliminado correctamente")
+                    file.write(f"{films} \n")
+            print("Película  eliminado correctamente")
         else:
-            print("El libro indicado no se encentra disponible.")
+            print("La película indicada no se encentra disponible.")
     except FileNotFoundError:
         print("Error")
     return           
@@ -102,17 +102,3 @@ def menu():
     print("5. Salir")
     option = input("Dime qué quieres hacer: ")
     return (int(option))
-
-while True:
-    option = menu()
-    if option == 1:
-        agregarpelicula()
-    elif option ==2:
-        visualizarpelicula()
-    elif option == 3:
-        buscarpelicula()
-    elif option ==4:
-        eliminarpelicula()
-    elif option == 5:
-        print("Goodbye, Nerd")
-        break 
