@@ -75,20 +75,19 @@ def eliminarpelicula():
             lines = file.readlines()
             for line in lines:
                 try:
-                    titulo,direccion,duracion,clasificacion = line.strip().split(",")
                     if pelicula not in line:
                         peliculas.append(f"{titulo},{direccion},{duracion},{clasificacion} \n")
                     else:
-                        eliminado= True
+                        eliminado = True
                 except ValueError:
                     print(f"{line}")
         if eliminado:
-                with open ("libros.txt", "w") as files:
-                    for films in peliculas:
-                        files.write(films)
+            with open ("peliculas.txt", "w") as file:
+                for films in peliculas:
+                    file.write(films)
                     print("Eliminado Correctamente.")
         else:
-                (print("No se pudo eliminar"))
+                print("No se pudo eliminar")
                         
     except FileNotFoundError:
         print("Error")
@@ -102,17 +101,3 @@ def menu():
     print("5. Salir")
     option = input("Dime qué quieres hacer.")
     return (int(option))
-
-while True:
-    option = menu()
-    if option == 1:
-        agregarpelicula()
-    elif option ==2:
-        visualizarpelicula()
-    elif option == 3:
-        buscarpelicula()
-    elif option ==4:
-        eliminarpelicula()
-    elif option == 5:
-        print("Goodbye, Nerd")
-        break 
