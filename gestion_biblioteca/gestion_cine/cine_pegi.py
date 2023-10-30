@@ -29,7 +29,7 @@ def agregarpelicula():#Agregar una película: Cada película debe tener un títu
     clasificacion = input("Dime la clasificación mediante PG-")
     try:
         with open ("peliculas.txt", "a") as file:
-            file.write(f"Título: {titulo} Director: {director} Duracion: {duracion} Clasificación: {clasificacion}")
+            file.write(f"Título: {titulo} Director: {director} Duracion: {duracion} Clasificación: {clasificacion} \n")
         
     except FileNotFoundError:
         print("Error.")
@@ -43,7 +43,7 @@ def visualizarpelicula():
             for line in lines:
                 try:
                     titulo,director,duracion,clasificacion = line.strip().split(",")
-                    print(f"{titulo} - {director} - {duracion} - {clasificacion}")
+                    print(f"{titulo} - {director} - {duracion} - {clasificacion} \n")
                 
                 except ValueError:
                     print(f"{line}")
@@ -66,7 +66,7 @@ def buscarpelicula():
         print("Error")            
                     
 
-def eliminarpelicula():
+def eliminarpelicula(): 
     pelicula = input("Dime el nombre de la película que deseas eliminar: ")
     peliculas = []
     eliminado = False
@@ -77,16 +77,18 @@ def eliminarpelicula():
                 try:
                     titulo,direccion,duracion,clasificacion = line.strip().split(",")
                     if pelicula not in line:
-                        peliculas.append(f"{titulo} - {direccion} - {duracion} - {clasificacion}  ")
+                        peliculas.append(f"{titulo},{direccion},{duracion},{clasificacion} \n")
                     else:
                         eliminado= True
                 except ValueError:
                     print(f"{line}")
         if eliminado:
-            with open ("libros.txt", "w") as file:
-                for films in peliculas:
-                    file.write(films)
-                print("Eliminado Correctamente.")
+                with open ("libros.txt", "w") as files:
+                    for films in peliculas:
+                        files.write(films)
+                    print("Eliminado Correctamente.")
+        else:
+                (print("No se pudo eliminar"))
                         
     except FileNotFoundError:
         print("Error")
