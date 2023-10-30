@@ -83,7 +83,10 @@ def eliminarpelicula():
                 except ValueError:
                     print(f"{line}")
         if eliminado:
-            with open ("libros.txt")
+            with open ("libros.txt", "w") as file:
+                for films in peliculas:
+                    file.write(films)
+                print("Eliminado Correctamente.")
                         
     except FileNotFoundError:
         print("Error")
