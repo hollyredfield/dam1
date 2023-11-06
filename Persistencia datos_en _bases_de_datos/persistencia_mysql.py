@@ -11,3 +11,4 @@ import mysql.connector
         print("Conexión exitosa.")
     except mysql.connector.Error as e:
         print("Error al conectar a la base de datos: ", e)
+#dwdwwwd
