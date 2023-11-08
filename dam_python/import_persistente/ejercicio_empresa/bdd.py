@@ -10,8 +10,8 @@ def conexion_bdd():
         )
     except mysql.connector.Error as z:
         print("Error al conectar a la base de datos: ", z)
-def acabarconexion(conexion):
+def acabarconexion(conexion_bdd):
     try:    
-        conexion.close()
+        conexion_bdd.close()
     except mysql.connector.Error as z:
         print("Error al tratar de cerar la conexión con la base de datos: ", z) 

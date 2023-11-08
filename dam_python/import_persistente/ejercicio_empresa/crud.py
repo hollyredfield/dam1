@@ -5,10 +5,10 @@ def crear(direccion_save):
         conexion =conexion_bdd()
         cursor= conexion.cursor()
         query = "INSERT INTO direccion (direccion) VALUES (%s)"
-        valores = direccion_save
+        valores = direccion_save 
         cursor.execute(query, valores)  
         conexion.commit()
-        acabarconexion(conexion)    
+        acabarconexion(conexion_bdd)    
         
     except mysql.connector.Error as j:
         print("Error al crear: ", j)
@@ -43,7 +43,7 @@ def eliminar_direccion(id_direccion):
         valores =(id_direccion)
         cursor.execute(query,valores)
         conexion.commit()
-        acabarconexion(conexion)
+        acabarconexion(conexion_bdd)
     except mysql.connector.Error as j:
         print("Error al eliminar: ", j)
     
