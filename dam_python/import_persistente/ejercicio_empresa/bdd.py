@@ -14,4 +14,4 @@ def acabarconexion(conexion):
     try:    
         conexion.close()
     except mysql.connector.Error as z:
-        print("Error al tratar de cerar la conexión con la base de datos: ", z)
+        print("Error al tratar de cerar la conexión con la base de datos: ", z) 
