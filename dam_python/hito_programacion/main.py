@@ -13,6 +13,14 @@ def menu():
     return (int(option))
 menu()
 
+def registrarcliente():
+def verclientes():
+def buscarclientes():
+def eliminarclientes():
+def verarticulos():
+def realizarcompra():
+def seguimientodecompra():
+def registrodearticulo():
 
 
 
