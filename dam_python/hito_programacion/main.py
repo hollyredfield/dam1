@@ -2,7 +2,7 @@ def menu():
     print("- Bienvenido a la app.")
     print("1.- Registrar Cliente")
     print("2.- Ver clientes")
-    print("3.- Buscar Clientes")
+    print("3.- Buscar Clientes") 
     print("4.- Eliminar Cliente ")
     print("5.- Ver artículos ")
     print("6.- Realizar compra")
@@ -27,6 +27,9 @@ def registrarcliente(clientes):
    
     except FileNotFoundError:
         return clientes
+
+
+
 
     
     
@@ -54,6 +57,8 @@ def buscarclientes():
                    
             if encontrado:
                 print(f"El {nombre_a_buscar} está disponible")
+            else:
+                print(f"")
     except FileNotFoundError:
         
     
