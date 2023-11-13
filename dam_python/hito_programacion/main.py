@@ -9,7 +9,9 @@ def menu():
     print("8.- Seguimiento de compra")
     print("9.- Registro de artículo")
     print("10.- Salir")
-
+    option = input("¿Qué quieres hacer?:")
+    return (int(option))
+menu()
 
 
 
