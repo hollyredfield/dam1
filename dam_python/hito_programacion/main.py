@@ -45,12 +45,23 @@ def verclientes():
         with open("clientes.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
-                nombre, apellido, numero, dni = line.strip().split(',')
-                print(f"Nombre: {nombre} - Apellido: {apellido} - Número: {numero} - DNI: {dni}") 
-                
+                # Verificar si la línea tiene el formato esperado antes de intentar dividirla
+                if ',' in line:
+                    try:
+                        nombre, apellido, numero, dni = line.strip().split(',')
+                        print(f"Nombre: {nombre} - Apellido: {apellido} - Número: {numero} - DNI: {dni}") 
+                    except ValueError:
+                        print(f"Error: La línea '{line.strip()}' no tiene el formato esperado.")
+                else:
+                    print(f"Error: La línea '{line.strip()}' no tiene el formato esperado.")
             
     except FileNotFoundError:
         print("Error al ver los clientes")
+
+
+    
+    
+    
 
 def buscarclientes():
     criterio_busqueda = input("Selecciona el criterio de búsqueda (nombre, DNI, número o teléfono): ").lower()
@@ -62,52 +73,56 @@ def buscarclientes():
             lines = file.readlines()
             for line in lines:
                 cliente = line.strip().split(',')
-                if criterio_busqueda == "nombre" and valor_buscado in cliente[0]:
-                    encontrado = True
-                elif criterio_busqueda == "dni" and valor_buscado == cliente[3]:
-                    encontrado = True
-                elif criterio_busqueda == "número" and valor_buscado == cliente[2]:
-                    encontrado = True
-                elif criterio_busqueda == "teléfono" and valor_buscado == cliente[1]:
-                    encontrado = True
+                
+                # Verificar que haya suficientes elementos en la lista
+                if len(cliente) >= 4:
+                    if criterio_busqueda == "nombre" and valor_buscado in cliente[0]:
+                        encontrado = True
+                    elif criterio_busqueda == "dni" and valor_buscado == cliente[3]:
+                        encontrado = True
+                    elif criterio_busqueda == "número" and valor_buscado == cliente[2]:
+                        encontrado = True
+                    elif criterio_busqueda == "teléfono" and valor_buscado == cliente[1]:
+                        encontrado = True
 
-                if encontrado:
-                    print(f"Cliente encontrado - Nombre: {cliente[0]}, Apellido: {cliente[1]}, Número: {cliente[2]}, DNI: {cliente[3]}")
-                    encontrado = False
+                    if encontrado:
+                        print(f"Cliente encontrado - Nombre: {cliente[0]}, Apellido: {cliente[1]}, Número: {cliente[2]}, DNI: {cliente[3]}")
+                        encontrado = False
 
             if not encontrado:
                 print(f"No se encontró ningún cliente con {criterio_busqueda} igual a {valor_buscado}")
 
     except FileNotFoundError:
         print("Error al buscar el cliente")
+    return
 
-    
-    
-    
-
-def eliminarcliente():
+def eliminarcliente(clientes):
     dni_a_eliminar = input("Dime el DNI del cliente que quieres eliminar: ")
-    eliminado = False
-    clientes = []
+    encontrado = False
 
     try:
         with open("clientes.txt", "r") as file:
             lines = file.readlines()
+
+        with open("clientes.txt", "w") as file:
             for line in lines:
                 cliente = line.strip().split(',')
-                if dni_a_eliminar == cliente[3]:
-                    print(f"El cliente con DNI {dni_a_eliminar} ha sido eliminado correctamente.")
-                    eliminado = True
-                else:
-                    clientes.append(line)
 
-        if eliminado:
-            with open("clientes.txt", "w") as file:
-                for line in clientes:
-                    file.write(line)
+                # Verificar que haya suficientes elementos en la lista
+                if len(cliente) >= 4:
+                    if dni_a_eliminar == cliente[3]:
+                        encontrado = True
+                        print(f"El cliente con DNI {dni_a_eliminar} ha sido eliminado correctamente.")
+                    else:
+                        file.write(line)
+
+        if not encontrado:
+            print(f"No se encontró ningún cliente con DNI {dni_a_eliminar}")
 
     except FileNotFoundError:
         print("Error al eliminar el cliente")
+
+
 
 
 
@@ -206,7 +221,7 @@ while True:
     elif option ==3:
         buscarclientes()
     elif option == 4:
-        eliminarcliente()
+        eliminar= eliminarcliente(clientes)
     elif option == 8:
         anadir = registrodearticulo(articulos)
     elif option == 5:
