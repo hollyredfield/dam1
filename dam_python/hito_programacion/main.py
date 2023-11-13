@@ -13,13 +13,27 @@ def menu():
     print("11.- Salir")
     option = input("¿Qué quieres hacer?:")
     return (int(option))
-menu()
 
-def registrarcliente():  
-    cliente = input ("Dime tu nombre: ")
+clientes = []
+def registrarcliente(clientes):  
+    nombre = input ("Dime tu nombre: ")
+    apellido = input ("Apellidos: ")
+    numero = input ("Dime tu número: ")
+    dni = input ("DNI: ")
+    try:
+        with open("clientes.txt", "a") as file:  # como estamos añadiendo, se pone en modo append.
+            file.write(nombre + ',' + apellido + ','  + numero + ',' +  dni + '\n')  
+            print(f"Cliente {nombre} añadido correctamente")
+   
+    except FileNotFoundError:
+        return clientes
+
     
-""" def verclientes(): 
-def buscarclientes():
+    
+def verclientes(): 
+    try:
+    except
+""" def buscarclientes():
 def eliminarcliente():
 def verarticulos():
 def realizarcompra():
@@ -32,10 +46,13 @@ def buscar_articulo():
 while True:
     option = menu()
     if option == 1:
-        registrarcliente()
-"""     elif option == 2:
+        registrarcliente(clientes)
+    elif option == 11:
+        print("Chao, Pescao.")
+        break
+  elif option == 2:
         verclientes()
-    elif option ==3:
+"""     elif option ==3:
         buscarclientes()
     elif option == 4:
         eliminarcliente()
@@ -50,12 +67,7 @@ while True:
     elif option == 9:
         eliminar_articulo()
     elif option == 10:
-        buscar_articulo() """
-    else:
-        if option == 11:
-            print("Chao, Pescao.")
-            break
-
+        buscar_articulo()  """
 
 
 
