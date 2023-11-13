@@ -44,12 +44,16 @@ def verclientes():
 
 def buscarclientes():
     nombre_a_buscar= input("Dime el cliente ")
+    encontrado = False
     try:
         with open("clientes.txt","r") as file:
             lines= file.readlines()
             for line in lines:
-                if 
-         
+                if nombre_a_buscar in line:
+                    encontrado= True
+                   
+            if encontrado:
+                print()
     except FileNotFoundError:
     
     
