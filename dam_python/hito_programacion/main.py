@@ -105,12 +105,12 @@ def registrodearticulo(articulos):
     
 
 def verarticulos():
-      try:
+    try:
         with open("articulos.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
                 nombre= line.strip().split(',')
-                print(f"Nombre: {nombre}") 
+                print(f"Artículos disponobles: {nombre}") 
                 
             
     except FileNotFoundError:
