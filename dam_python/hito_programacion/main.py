@@ -89,8 +89,16 @@ def eliminarcliente():
                         
     except FileNotFoundError:
         print("Error al eliminar el cliente")
-def registrodearticulo():
     
+def registrodearticulo():
+    nombre = input ("Dime el nombre de artículo que quieras añadir ")
+    try:
+        with open("articulos.txt", "a") as file:  # como estamos añadiendo, se pone en modo append.
+            file.write(nombre + '\n')  
+            print(f"Artículo {nombre} añadido correctamente")
+   
+    except FileNotFoundError:
+        return clientes
     
 """
 def verarticulos():
