@@ -16,16 +16,22 @@ def menu():
     return (int(option))
 
 clientes = []
+
 def registrarcliente(clientes):  
-    nombre = input ("Dime tu nombre: ")
-    apellido = input ("Apellidos: ")
-    numero = input ("Dime tu número: ")
-    dni = input ("DNI: ")
+    nombre = input("Dime tu nombre: ")
+    apellido = input("Apellidos: ")
+    numero = input("Dime tu número: ")
+    dni = input("DNI: ")
+    
+    # Generar un ID único para el nuevo cliente
+    nuevo_id = len(clientes) + 1
+    
     try:
-        with open("clientes.txt", "a") as file:  # como estamos añadiendo, se pone en modo append.
-            file.write(nombre + ',' + apellido + ','  + numero + ',' +  dni + '\n')  
-            print(f"Cliente {nombre} añadido correctamente")
-   
+        with open("clientes.txt", "a") as file:
+            file.write(f"{nuevo_id},{nombre},{apellido},{numero},{dni}\n")
+            print(f"Cliente {nombre} añadido correctamente con ID {nuevo_id}")
+            # Añadir el nuevo cliente a la lista en memoria
+            clientes.append({'id': nuevo_id,'nombre': nombre,'apellido': apellido,'numero': numero,'dni': dni})
     except FileNotFoundError:
         return clientes
 
@@ -79,27 +85,31 @@ def buscarclientes():
     
     
 
-def eliminarcliente(clientes):
-    nombre_a_eliminar = input("Dime el cliente que quieres eliminar: ")
+def eliminarcliente():
+    dni_a_eliminar = input("Dime el DNI del cliente que quieres eliminar: ")
     eliminado = False
     clientes = []
+
     try:
         with open("clientes.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
-                if nombre_a_eliminar in line:
-                    print(f"El cliente {nombre_a_eliminar} ha sido eliminado correctamente.")
+                cliente = line.strip().split(',')
+                if dni_a_eliminar == cliente[3]:
+                    print(f"El cliente con DNI {dni_a_eliminar} ha sido eliminado correctamente.")
                     eliminado = True
                 else:
                     clientes.append(line)
-               
-            if eliminado:
-                with open ("clientes.txt", "w") as file:
-                    for line in clientes:
-                        file.write(line)
-                        
+
+        if eliminado:
+            with open("clientes.txt", "w") as file:
+                for line in clientes:
+                    file.write(line)
+
     except FileNotFoundError:
         print("Error al eliminar el cliente")
+
+
 
 
 articulos = []    
@@ -153,10 +163,31 @@ def seguimientodecompra():
 
     except FileNotFoundError:
         print("Error al realizar la búsqueda")
-
+    return
 
 def realizarcompra():
-    
+    nombre_cliente = input("Dime tu nombre: ")
+    apellido_cliente = input("Apellidos: ")
+    numero_cliente = input("Dime tu número: ")
+    dni_cliente = input("DNI: ")
+    articulo_deseado = input("Dime el nombre del producto que quieres comprar: ")
+    cantidad = int(input("¿Cuántas unidades deseas comprar? "))
+
+    try:
+        with open("articulos.txt", "r") as file:
+            lines = file.readlines()
+            for line in lines:
+                articulo = line.strip().split(',')
+                if articulo_deseado.lower() in articulo[1].lower():
+                    # El producto está en el inventario
+                    with open("compra.txt", "a") as compra_file:
+                        compra_file.write(f"{nombre_cliente}, {apellido_cliente}, {numero_cliente}, {dni_cliente}, {articulo[1]}, {cantidad} unidades\n")
+                    print(f"Compra realizada: {cantidad} unidades de {articulo[1]} asociadas a {nombre_cliente} {apellido_cliente}")
+                    break
+
+    except FileNotFoundError:
+        print("Error al realizar la compra.")
+
 """
 
 def eliminar_articulo():
@@ -175,24 +206,24 @@ while True:
     elif option ==3:
         buscarclientes()
     elif option == 4:
-        eliminarcliente(clientes)
+        eliminarcliente()
     elif option == 8:
         anadir = registrodearticulo(articulos)
     elif option == 5:
         verarticulos()
     elif option ==7:
         seguimientodecompra()
-"""
+
     elif option ==6: 
         realizarcompra()
     
-    
-    elif option == 9:
+"""   
+  elif option == 9:
         eliminar_articulo()
+    
     elif option == 10:
         buscar_articulo()  
-"""
-
+ """
 
 
 
