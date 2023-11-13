@@ -68,9 +68,24 @@ def buscarclientes():
     
 
 def eliminarcliente():
+    nombre_a_eliminar = input("Dime el cliente que quieres eliminar: ")
+    eliminado = False
+    clientes = []
     try:
         with open("clientes.txt", "r") as file:
-            
+            lines = file.readlines()
+            for line in lines:
+                if nombre_a_eliminar in line:
+                    print(f"El cliente {nombre_a_eliminar} ha sido eliminado correctamente.")
+                    eliminado = True
+                else:
+                    clientes.append(line)
+               
+            if eliminado:
+                with open ("clientes.txt", "w") as file:
+                    for line in clientes:
+                        file.write(line)
+                        
     except FileNotFoundError:
         print("Error al eliminar el cliente")
 """
@@ -95,9 +110,10 @@ while True:
     elif option ==3:
         buscarclientes()
         
-"""
+
     elif option == 4:
         eliminarcliente()
+"""
     elif option == 5:
         verarticulos()
     elif option ==6: 
