@@ -48,4 +48,3 @@
 48, Sopa en sobre, 1.0 €
 49, Pasta de dientes, 2.5 €
 50, Detergente, 3.0 €
-51,bolsa de patatas,2.99
