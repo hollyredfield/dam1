@@ -11,7 +11,7 @@ def menu():
     print("9. Eliminar Artículo")
     print("10. Buscar Artículo")
     print("11.- Salir")
-    option = input("¿Qué quieres hacer?:")
+    option = input("¿Qué quieres hacer?")
     return (int(option))
 
 clientes = []
@@ -46,7 +46,7 @@ def verclientes():
         print("Error al ver los clientes")
 
 def buscarclientes():
-    nombre_a_buscar= input("Dime el cliente ")
+    nombre_a_buscar= input("Dime el cliente que quieres buscar: ")
     encontrado = False
     try:
         with open("clientes.txt","r") as file:
@@ -56,7 +56,7 @@ def buscarclientes():
                     encontrado= True
                    
             if encontrado:
-                print(f"El {nombre_a_buscar} está disponible")
+                print(f"El cliente {nombre_a_buscar} está disponible")
             else:
                 print(f"El {nombre_a_buscar} no existe ")
     except FileNotFoundError:
@@ -66,8 +66,14 @@ def buscarclientes():
     
     
     
-"""
+
 def eliminarcliente():
+    try:
+        with open("clientes.txt", "r") as file:
+            
+    except FileNotFoundError:
+        print("Error al eliminar el cliente")
+"""
 def verarticulos():
 def realizarcompra():
 def seguimientodecompra():
@@ -86,10 +92,10 @@ while True:
     elif option == 2:
         verclientes()
         
-        
-"""     
-elif option ==3:
+    elif option ==3:
         buscarclientes()
+        
+"""
     elif option == 4:
         eliminarcliente()
     elif option == 5:
