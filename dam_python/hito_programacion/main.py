@@ -14,7 +14,7 @@ def menu():
 menu()
 
 def registrarcliente():  
-def verclientes():
+def verclientes(): 
 def buscarclientes():
 def eliminarclientes():
 def verarticulos():
@@ -37,7 +37,8 @@ while True:
     elif option ==6:
         seguimientodecompra()
     elif option == 7:
-        
+        registrode
+
 
 
 
