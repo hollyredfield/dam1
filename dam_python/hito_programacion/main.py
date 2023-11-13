@@ -13,7 +13,7 @@ def menu():
     return (int(option))
 menu()
 
-def registrarcliente():
+def registrarcliente():  
 def verclientes():
 def buscarclientes():
 def eliminarclientes():
@@ -35,7 +35,11 @@ while True:
     elif option ==5: 
         realizarcompra()
     elif option ==6:
+        seguimientodecompra()
+    elif option == 7:
         
+
+
 
 
 
