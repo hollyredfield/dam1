@@ -32,8 +32,17 @@ def registrarcliente(clientes):
     
 def verclientes(): 
     try:
-    except
-""" def buscarclientes():
+        with open("clientes.txt", "r") as file:
+            lines = file.readlines()
+            for line in lines:
+                nombre, apellido, numero, dni = line.strip().split(',')
+                print(f"Nombre: {nombre} - Apellido: {apellido} - Numero: {numero} - DNI: {dni}")
+                
+            
+    except FileNotFoundError:
+        print("Error al ver los clientes")
+"""
+def buscarclientes():
 def eliminarcliente():
 def verarticulos():
 def realizarcompra():
@@ -50,9 +59,12 @@ while True:
     elif option == 11:
         print("Chao, Pescao.")
         break
-  elif option == 2:
+    elif option == 2:
         verclientes()
-"""     elif option ==3:
+        
+        
+"""     
+elif option ==3:
         buscarclientes()
     elif option == 4:
         eliminarcliente()
@@ -67,7 +79,8 @@ while True:
     elif option == 9:
         eliminar_articulo()
     elif option == 10:
-        buscar_articulo()  """
+        buscar_articulo()  
+"""
 
 
 
