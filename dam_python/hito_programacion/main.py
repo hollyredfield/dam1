@@ -98,7 +98,7 @@ def registrodearticulo(articulos):
     precio = input ("Dime el precio del producto: ")
     try:
         with open("articulos.txt", "a") as file:  
-            file.write(id + ',' + nombre + ',' + precio + '\n' )  
+            file.write((str(id)) + ',' + nombre + ',' + precio + '\n' )  
             print(f"Artículo {nombre} añadido correctamente \n")
    
     except FileNotFoundError:
@@ -111,12 +111,12 @@ def verarticulos():
         with open("articulos.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
-                nombre= line.strip().split(',')
-                print(f"Artículos disponobles: {nombre}") 
+                nombre = line.strip().split(',')
+                print(f"Artículos disponibles: {', '.join(nombre)}")  # Utiliza join para imprimir sin corchetes
                 
-            
     except FileNotFoundError:
         print("Error al ver los artículos")
+
 def seguimientodecompra():
     nombre_articulo = input("Dime el nombre artículo que quieres buscar: ")
     encontrado = False
