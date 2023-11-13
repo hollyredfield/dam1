@@ -146,7 +146,7 @@ def seguimientodecompra():
 
                 if encontrado:
                     print(f"Artículo encontrado - ID: {articulo[0]}, Nombre: {articulo[1]}, Precio: {articulo[2]}")
-                    break  # Agrega un break para salir del bucle cuando encuentre un artículo
+                    break  
 
             if not encontrado:
                 print(f"No se encontró ningún artículo con {criterio_busqueda} igual a {valor_buscado}")
@@ -154,9 +154,10 @@ def seguimientodecompra():
     except FileNotFoundError:
         print("Error al realizar la búsqueda")
 
-"""
-def realizarcompra():
 
+def realizarcompra():
+    
+"""
 
 def eliminar_articulo():
 def buscar_articulo():
