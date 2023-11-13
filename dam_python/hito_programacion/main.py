@@ -39,7 +39,7 @@ def verclientes():
             lines = file.readlines()
             for line in lines:
                 nombre, apellido, numero, dni = line.strip().split(',')
-                print(f"Nombre: {nombre} - Apellido: {apellido} - Numero: {numero} - DNI: {dni}")
+                print(f"Nombre: {nombre} - Apellido: {apellido} - Numero: {numero} - DNI: {dni}") 
                 
             
     except FileNotFoundError:
@@ -58,9 +58,10 @@ def buscarclientes():
             if encontrado:
                 print(f"El {nombre_a_buscar} está disponible")
             else:
-                print(f"")
+                print(f"El {nombre_a_buscar} no existe ")
     except FileNotFoundError:
-        
+        print("Error al indexar el cliente.")
+ 
     
     
     
