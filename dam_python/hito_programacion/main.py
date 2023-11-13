@@ -41,8 +41,17 @@ def verclientes():
             
     except FileNotFoundError:
         print("Error al ver los clientes")
-"""
+
 def buscarclientes():
+    nombre_a_buscar= input("Dime el cliente ")
+    try:
+        with open("")
+        
+    except FileNotFoundError:
+    
+    
+    
+"""
 def eliminarcliente():
 def verarticulos():
 def realizarcompra():
