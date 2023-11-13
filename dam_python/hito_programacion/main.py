@@ -61,6 +61,7 @@ def buscarclientes():
                 print(f"El {nombre_a_buscar} no existe ")
     except FileNotFoundError:
         print("Error al indexar el cliente.")
+    return
  
     
     
