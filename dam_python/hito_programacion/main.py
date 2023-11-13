@@ -93,10 +93,12 @@ def eliminarcliente(clientes):
 
 articulos = []    
 def registrodearticulo(articulos):
+    id = len(articulos) +1
     nombre = input ("Dime el nombre de artículo que quieras añadir: ")
+    precio = input ("Dime el precio del producto: ")
     try:
         with open("articulos.txt", "a") as file:  
-            file.write(nombre + '\n')  
+            file.write(id + ',' + nombre + ',' + precio + '\n' )  
             print(f"Artículo {nombre} añadido correctamente \n")
    
     except FileNotFoundError:
