@@ -47,23 +47,34 @@ def verclientes():
         print("Error al ver los clientes")
 
 def buscarclientes():
-    nombre_a_buscar= input("Dime el cliente que quieres buscar: ")
+    criterio_busqueda = input("Selecciona el criterio de búsqueda (nombre, DNI, número o teléfono): ").lower()
+    valor_buscado = input(f"Dime el {criterio_busqueda} del cliente que quieres buscar: ")
     encontrado = False
+
     try:
-        with open("clientes.txt","r") as file:
-            lines= file.readlines()
+        with open("clientes.txt", "r") as file:
+            lines = file.readlines()
             for line in lines:
-                if nombre_a_buscar in line:
-                    encontrado= True
-                   
-            if encontrado:
-                print(f"El cliente {nombre_a_buscar} está disponible")
-            else:
-                print(f"El {nombre_a_buscar} no existe ")
+                cliente = line.strip().split(',')
+                if criterio_busqueda == "nombre" and valor_buscado in cliente[0]:
+                    encontrado = True
+                elif criterio_busqueda == "dni" and valor_buscado == cliente[3]:
+                    encontrado = True
+                elif criterio_busqueda == "número" and valor_buscado == cliente[2]:
+                    encontrado = True
+                elif criterio_busqueda == "teléfono" and valor_buscado == cliente[1]:
+                    encontrado = True
+
+                if encontrado:
+                    print(f"Cliente encontrado - Nombre: {cliente[0]}, Apellido: {cliente[1]}, Número: {cliente[2]}, DNI: {cliente[3]}")
+                    encontrado = False
+
+            if not encontrado:
+                print(f"No se encontró ningún cliente con {criterio_busqueda} igual a {valor_buscado}")
+
     except FileNotFoundError:
-        print("Error al indexar el cliente.")
-    return
- 
+        print("Error al buscar el cliente")
+
     
     
     
@@ -116,7 +127,6 @@ def verarticulos():
                 
     except FileNotFoundError:
         print("Error al ver los artículos")
-
 def seguimientodecompra():
     criterio_busqueda = input("Selecciona el criterio de búsqueda (nombre, precio o id): ").lower()
     valor_buscado = input(f"Dime el {criterio_busqueda} del artículo que quieres buscar: ")
@@ -136,7 +146,7 @@ def seguimientodecompra():
 
                 if encontrado:
                     print(f"Artículo encontrado - ID: {articulo[0]}, Nombre: {articulo[1]}, Precio: {articulo[2]}")
-                    encontrado = False
+                    break  # Agrega un break para salir del bucle cuando encuentre un artículo
 
             if not encontrado:
                 print(f"No se encontró ningún artículo con {criterio_busqueda} igual a {valor_buscado}")
@@ -144,10 +154,6 @@ def seguimientodecompra():
     except FileNotFoundError:
         print("Error al realizar la búsqueda")
 
-
-
-
-        
 """
 def realizarcompra():
 
