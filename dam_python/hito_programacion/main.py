@@ -115,9 +115,13 @@ def verarticulos():
             
     except FileNotFoundError:
         print("Error al ver los artículos")
+def seguimientodecompra():
+    try:
+    except FileNotFoundError:
+        
 """
 def realizarcompra():
-def seguimientodecompra():
+
 
 def eliminar_articulo():
 def buscar_articulo():
@@ -140,11 +144,12 @@ while True:
         anadir = registrodearticulo(articulos)
     elif option == 5:
         verarticulos()
+    elif option ==7:
+        seguimientodecompra()
 """
     elif option ==6: 
         realizarcompra()
-    elif option ==7:
-        seguimientodecompra()
+    
     
     elif option == 9:
         eliminar_articulo()
