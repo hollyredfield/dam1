@@ -118,23 +118,35 @@ def verarticulos():
         print("Error al ver los artículos")
 
 def seguimientodecompra():
-    nombre_articulo = input("Dime el nombre artículo que quieres buscar: ")
+    criterio_busqueda = input("Selecciona el criterio de búsqueda (nombre, precio o id): ").lower()
+    valor_buscado = input(f"Dime el {criterio_busqueda} del artículo que quieres buscar: ")
     encontrado = False
+
     try:
-        with open("articulos.txt","r") as file:
+        with open("articulos.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
-                if nombre_articulo in line:
+                articulo = line.strip().split(',')
+                if criterio_busqueda == "nombre" and valor_buscado in articulo[1]:
                     encontrado = True
-            if encontrado:
-                print(f"el artículo {nombre_articulo} está disponible. ")
-            else:
-                print(f"El artículo {nombre_articulo} que has escrito no está disponible. ")
-            
-        
+                elif criterio_busqueda == "precio" and valor_buscado == articulo[2]:
+                    encontrado = True
+                elif criterio_busqueda == "id" and valor_buscado == articulo[0]:
+                    encontrado = True
+
+                if encontrado:
+                    print(f"Artículo encontrado - ID: {articulo[0]}, Nombre: {articulo[1]}, Precio: {articulo[2]}")
+                    encontrado = False
+
+            if not encontrado:
+                print(f"No se encontró ningún artículo con {criterio_busqueda} igual a {valor_buscado}")
+
     except FileNotFoundError:
-        print("Error")
-    return
+        print("Error al realizar la búsqueda")
+
+
+
+
         
 """
 def realizarcompra():
