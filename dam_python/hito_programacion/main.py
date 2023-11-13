@@ -68,7 +68,7 @@ def buscarclientes():
     
     
 
-def eliminarcliente():
+def eliminarcliente(clientes):
     nombre_a_eliminar = input("Dime el cliente que quieres eliminar: ")
     eliminado = False
     clientes = []
@@ -89,19 +89,33 @@ def eliminarcliente():
                         
     except FileNotFoundError:
         print("Error al eliminar el cliente")
-    
-def registrodearticulo():
-    nombre = input ("Dime el nombre de artículo que quieras añadir ")
+
+
+articulos = []    
+def registrodearticulo(articulos):
+    nombre = input ("Dime el nombre de artículo que quieras añadir: ")
     try:
         with open("articulos.txt", "a") as file:  # como estamos añadiendo, se pone en modo append.
             file.write(nombre + '\n')  
-            print(f"Artículo {nombre} añadido correctamente")
+            print(f"Artículo {nombre} añadido correctamente \n")
    
     except FileNotFoundError:
-        return clientes
+        print("Error al añadir el artículo")
+        
     
-"""
+
 def verarticulos():
+      try:
+        with open("articulos.txt", "r") as file:
+            lines = file.readlines()
+            for line in lines:
+                nombre= line.strip().split(',')
+                print(f"Nombre: {nombre}") 
+                
+            
+    except FileNotFoundError:
+        print("Error al ver los artículos")
+"""
 def realizarcompra():
 def seguimientodecompra():
 
@@ -112,24 +126,21 @@ def buscar_articulo():
 while True:
     option = menu()
     if option == 1:
-        registrarcliente(clientes)
+        anadircliente = registrarcliente(clientes)
     elif option == 11:
         print("Chao, Pescao.")
         break
     elif option == 2:
         verclientes()
-        
     elif option ==3:
         buscarclientes()
-        
-
     elif option == 4:
-        eliminarcliente()
+        eliminarcliente(clientes)
     elif option == 8:
-        registrodearticulo()
-"""
+        anadir = registrodearticulo(articulos)
     elif option == 5:
         verarticulos()
+"""
     elif option ==6: 
         realizarcompra()
     elif option ==7:
