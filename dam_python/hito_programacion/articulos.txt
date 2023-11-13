@@ -1,0 +1,51 @@
+1, Lechuga, 4.7 €
+2, Pan de molde, 2.3 €
+3, Leche, 1.5 €
+4, Arroz, 2.0 €
+5, Espaguetis, 1.2 €
+6, Tomates, 3.8 €
+7, Papas, 2.5 €
+8, Pechuga de pollo, 7.0 €
+9, Atún en lata, 1.8 €
+10, Cereal, 3.5 €
+11, Café, 5.0 €
+12, Aceite de oliva, 6.4 €
+13, Harina, 1.8 €
+14, Azúcar, 1.5 €
+15, Huevos, docena, 2.5 €
+16, Queso cheddar, 3.0 €
+17, Yogur natural, pack de 4, 2.2 €
+18, Manzanas, 2.0 €
+19, Plátanos, 1.8 €
+20, Zanahorias, 1.2 €
+21, Cebollas, 1.5 €
+22, Pimiento verde, 2.3 €
+23, Sal, 0.8 €
+24, Pimienta, 1.2 €
+25, Jugo de naranja, 2.0 €
+26, Aguacates, 1.2 € 
+27, Yogur de sabores, 3.5 €
+28, Pan integral, 2.5 €
+29, Helado de vainilla, 4.0 €
+30, Galletas, 2.0 €
+31, Mantequilla, 2.8 €
+32, Cerveza, 8.0 €
+33, Vino tinto, 9.5 €
+34, Aguas minerales, 5.0 €
+35, Salmón fresco, 15.0 €
+36, Camarones, 20.0 €
+37, Jamón serrano, 3.5 €
+38, Mortadela, 2.0 €
+39, Vinagre, 1.0 €
+40, Champiñones, 1.8 €
+41, Salsa de tomate, 2.0 €
+42, Patatas fritas, 1.5 €
+43, Nueces, 4.0 €
+44, Avena, 3.0 €
+45, Tortillas de maíz,  2.2 €
+46, Sardinas en lata, 1.5 €
+47, Maíz enlatado, 1.2 €
+48, Sopa en sobre, 1.0 €
+49, Pasta de dientes, 2.5 €
+50, Detergente, 3.0 €
+

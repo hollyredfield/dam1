@@ -95,7 +95,7 @@ articulos = []
 def registrodearticulo(articulos):
     nombre = input ("Dime el nombre de artículo que quieras añadir: ")
     try:
-        with open("articulos.txt", "a") as file:  # como estamos añadiendo, se pone en modo append.
+        with open("articulos.txt", "a") as file:  
             file.write(nombre + '\n')  
             print(f"Artículo {nombre} añadido correctamente \n")
    
@@ -116,8 +116,23 @@ def verarticulos():
     except FileNotFoundError:
         print("Error al ver los artículos")
 def seguimientodecompra():
+    nombre_articulo = input("Dime el nombre artículo que quieres buscar: ")
+    encontrado = False
     try:
+        with open("articulos.txt","r") as file:
+            lines = file.readlines()
+            for line in lines:
+                if nombre_articulo in line:
+                    encontrado = True
+            if encontrado:
+                print(f"el artículo {nombre_articulo} está disponible. ")
+            else:
+                print(f"El artículo {nombre_articulo} que has escrito no está disponible. ")
+            
+        
     except FileNotFoundError:
+        print("Error")
+    return
         
 """
 def realizarcompra():
