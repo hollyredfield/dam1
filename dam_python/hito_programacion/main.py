@@ -53,7 +53,7 @@ def buscarclientes():
                     encontrado= True
                    
             if encontrado:
-                print(f"El {nombre_a_buscar}")
+                print(f"El {nombre_a_buscar} está disponible")
     except FileNotFoundError:
         
     
