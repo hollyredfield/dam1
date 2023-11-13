@@ -1,3 +1,4 @@
+
 def menu():
     print("- Bienvenido a la app.")
     print("1.- Registrar Cliente")
@@ -11,7 +12,7 @@ def menu():
     print("9. Eliminar Artículo")
     print("10. Buscar Artículo")
     print("11.- Salir")
-    option = input("¿Qué quieres hacer?")
+    option = input(f"¿Qué quieres hacer? \n")
     return (int(option))
 
 clientes = []
@@ -39,7 +40,7 @@ def verclientes():
             lines = file.readlines()
             for line in lines:
                 nombre, apellido, numero, dni = line.strip().split(',')
-                print(f"Nombre: {nombre} - Apellido: {apellido} - Numero: {numero} - DNI: {dni}") 
+                print(f"Nombre: {nombre} - Apellido: {apellido} - Número: {numero} - DNI: {dni}") 
                 
             
     except FileNotFoundError:
@@ -88,11 +89,14 @@ def eliminarcliente():
                         
     except FileNotFoundError:
         print("Error al eliminar el cliente")
+def registrodearticulo():
+    
+    
 """
 def verarticulos():
 def realizarcompra():
 def seguimientodecompra():
-def registrodearticulo():
+
 def eliminar_articulo():
 def buscar_articulo():
  """
@@ -113,6 +117,8 @@ while True:
 
     elif option == 4:
         eliminarcliente()
+    elif option == 8:
+        registrodearticulo()
 """
     elif option == 5:
         verarticulos()
@@ -120,8 +126,7 @@ while True:
         realizarcompra()
     elif option ==7:
         seguimientodecompra()
-    elif option == 8:
-        registrodearticulo()
+    
     elif option == 9:
         eliminar_articulo()
     elif option == 10:
