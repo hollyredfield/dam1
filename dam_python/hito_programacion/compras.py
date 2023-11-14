@@ -16,7 +16,7 @@ def realizarcompra():
                     with open("compra.txt", "a") as compra_file:
                         compra_file.write(f"{nombre_cliente}, {apellido_cliente}, {numero_cliente}, {dni_cliente}, {articulo[1]}, {cantidad} unidades\n")
                     print(f"Compra realizada: {cantidad} unidades de {articulo[1]} asociadas a {nombre_cliente} {apellido_cliente}")
-                    seguimientodecompra()
+                    seguimientodecompra()    
                     break
 
     except FileNotFoundError:
