@@ -9,7 +9,7 @@ while True:
     if option == 1:
         anadircliente = registrarcliente(clientes)
     elif option == 2:
-        verclientes()
+        verclientes() 
     elif option == 3:
         buscarclientes()
     elif option == 4:
@@ -27,6 +27,8 @@ while True:
     elif option == 7:
         seguimientodecompra()
     elif option == 11:
+        login()
+    elif option == 12:
         print("Chao, Pescao.")
         break 
     else:

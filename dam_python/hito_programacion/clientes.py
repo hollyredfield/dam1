@@ -1,3 +1,28 @@
+from articulo import *
+def login():
+    try:
+        verclientes()
+        usuario = input("Dime tu usuario para iniciar sesión: ")
+        encontrado = False
+        with open("clientes.txt", "r") as f:
+            lines = f.readlines()
+            for line in lines:
+                user = line.strip().split(',')
+                if len(user) >= 4 and usuario.strip() == user[0].strip():
+                    encontrado = True
+                    break
+            if encontrado:
+                
+                print(f"Bienvenido de nuevo {usuario}, aquí arriba tienes los artículos a poder comprar {articulos_disponibles}")
+                articulos_disponibles = verarticulos()
+            else:
+                print("Error: Usuario no encontrado.")
+    except FileNotFoundError:
+        print(f"El {usuario} escrito no existe.")
+    
+
+
+                
 clientes = []
 
 def registrarcliente(clientes):  
