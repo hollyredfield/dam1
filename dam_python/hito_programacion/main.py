@@ -31,6 +31,7 @@ while True:
         break 
     else:
         print("Error al seleccionar una opción. ") 
+        k
 
 
 
