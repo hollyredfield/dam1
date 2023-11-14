@@ -12,14 +12,13 @@ def login():
                     encontrado = True
                     break
             if encontrado:
-                
-                print(f"Bienvenido de nuevo {usuario}, aquí arriba tienes los artículos a poder comprar {articulos_disponibles}")
                 articulos_disponibles = verarticulos()
+                print(f"Bienvenido de nuevo {usuario}, aquí arriba tienes los artículos a poder comprar {articulos_disponibles}")
             else:
                 print("Error: Usuario no encontrado.")
     except FileNotFoundError:
         print(f"El {usuario} escrito no existe.")
-    
+
 
 
                 
