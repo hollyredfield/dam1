@@ -19,7 +19,6 @@ def login():
         print(f"El {usuario} escrito no existe.")
     return               
 clientes = []
-
 def registrarcliente(clientes):  
     nombre = input("Dime tu nombre: ")
     apellido = input("Apellidos: ")
