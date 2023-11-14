@@ -24,25 +24,14 @@ while True:
         eliminar_articulo(articulos)
     elif option == 10:
         buscar_articulo()
+    
+    elif option ==7:
+        seguimientodecompra()
     elif option == 11:
         print("Chao, Pescao.")
-        break
-
-
-
-
-
-#def seguimientodecompra():
-    
-
-
-
-
-
-""" 
-        elif option ==7:
-        seguimientodecompra() 
-"""
+        break 
+    else:
+        print("Error al seleccionar una opción. ") 
 
 
 

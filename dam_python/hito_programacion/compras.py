@@ -21,3 +21,5 @@ def realizarcompra():
     except FileNotFoundError:
         print("Error al realizar la compra.")
     return
+def seguimientodecompra():
+    
