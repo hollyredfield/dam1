@@ -12,8 +12,7 @@ def login():
                     encontrado = True
                     break
             if encontrado:
-                articulos_disponibles = verarticulos()
-                print(f"Bienvenido de nuevo {usuario}, aquí arriba tienes los artículos a poder comprar {articulos_disponibles}")
+                print(f"Bienvenido de nuevo {usuario}, aquí arriba tienes los artículos a poder comprar {verarticulos()}")
             else:
                 print("Error: Usuario no encontrado.")
     except FileNotFoundError:
