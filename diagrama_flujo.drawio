@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T09:49:28.185Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Vpsdolaj-ybEqp-Secv6" version="22.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T10:05:54.534Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="fQF9U2aS7-qyR46xkxBY" version="22.1.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="493" dy="568" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -47,13 +47,46 @@
           <mxGeometry x="120" y="1040" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-18" value="REGISTRARCLIENTE(CLIENTES)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="280" y="370" width="210" height="30" as="geometry" />
+          <mxGeometry x="285" y="370" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-19" target="VLlErGUeabO-Wsx0XHVg-22">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-19" value="Solicitar información&lt;br&gt;del cliente" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="320" y="410" width="120" height="70" as="geometry" />
+          <mxGeometry x="330" y="410" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-22" target="VLlErGUeabO-Wsx0XHVg-23">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-22" value="Generar ID Único" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="330" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-23" target="VLlErGUeabO-Wsx0XHVg-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-23" value="Escribir en clientes.txt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-24" target="VLlErGUeabO-Wsx0XHVg-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-24" value="Imprimir mensaje" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-25" target="VLlErGUeabO-Wsx0XHVg-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-25" value="Añadir cliente a la lista en memoria" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-31" target="VLlErGUeabO-Wsx0XHVg-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-31" value="Leer &quot;clientes.txt&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-32" value="Iterar sobre las líneas y mostrar información" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="1040" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
