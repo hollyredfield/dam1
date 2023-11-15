@@ -20,7 +20,7 @@ def verarticulos():
             lines = file.readlines()
             for line in lines:
                 nombre = line.strip().split(',')
-                print(f"Artículos disponibles: {', '.join(nombre)}")  # Utiliza join para imprimir sin corchetes
+                print(f"Artículos disponibles: {', '.join(nombre)}")  # imprimir sin corchetes
                 
     except FileNotFoundError:
         print("Error al ver los artículos")
