@@ -24,14 +24,11 @@ def registrarcliente(clientes):
     apellido = input("Apellidos: ")
     numero = input("Dime tu número: ")
     dni = input("DNI: ")
-    # Generar un ID único para el nuevo cliente
-    nuevo_id = len(clientes) + 1
     try:
         with open("clientes.txt", "a") as file:
-            file.write(f"{nuevo_id},{nombre},{apellido},{numero},{dni}\n")
-            print(f"Cliente {nombre} añadido correctamente con ID {nuevo_id}")
-            # Añadir el nuevo cliente a la lista en memoria
-            clientes.append({'id': nuevo_id,'nombre': nombre,'apellido': apellido,'numero': numero,'dni': dni})
+            file.write(f"{nombre},{apellido},{numero},{dni}\n")
+            print(f"Cliente {nombre} añadido correctamente.")
+            clientes.append({'nombre': nombre,'apellido': apellido,'numero': numero,'dni': dni})
     except FileNotFoundError:
         print("Error al agregar el cliente.")
     return clientes
