@@ -6,7 +6,7 @@ def realizarcompra():
     articulo_deseado = input("Dime el nombre del producto que quieres comprar: ")
     cantidad = int(input("¿Cuántas unidades deseas comprar? "))
 
-    try:
+    try: #s
         with open("articulos.txt", "r") as file:
             lines = file.readlines()
             for line in lines:
