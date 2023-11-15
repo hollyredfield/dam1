@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T18:15:25.019Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="WC5YP9x08jtGZrW_Fxem" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T18:20:40.219Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="UdCkJZNTm11F33SU6jVF" version="22.1.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="635" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1075" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -166,7 +166,7 @@
         <mxCell id="VLlErGUeabO-Wsx0XHVg-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-61" target="VLlErGUeabO-Wsx0XHVg-63" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VLlErGUeabO-Wsx0XHVg-61" value="Leer &quot;articulos.txt&quot; y escribir líneas sin el cliente a eliminar" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-61" value="Leer &quot;articulos.txt&quot; y escribir líneas sin el artículo a eliminar" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1250" y="585" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-63" target="VLlErGUeabO-Wsx0XHVg-66" edge="1">
