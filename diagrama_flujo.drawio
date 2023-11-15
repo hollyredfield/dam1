@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T18:20:40.219Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="UdCkJZNTm11F33SU6jVF" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T18:43:22.050Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="A0fYwvwFgrDOkcv15tkU" version="22.1.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1075" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -275,7 +275,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5eMGE5Q4XNYzfyyt1u-K-6" value="BUSCARCLIENTES()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2375" y="360" width="140" height="30" as="geometry" />
+          <mxGeometry x="2395" y="370" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5eMGE5Q4XNYzfyyt1u-K-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5eMGE5Q4XNYzfyyt1u-K-7" target="5eMGE5Q4XNYzfyyt1u-K-8">
           <mxGeometry relative="1" as="geometry" />
@@ -291,6 +291,24 @@
         </mxCell>
         <mxCell id="5eMGE5Q4XNYzfyyt1u-K-9" value="Iterar y comparar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2395" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-12" value="BUSCAR_ARTICULO()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2570" y="370" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5eMGE5Q4XNYzfyyt1u-K-13" target="5eMGE5Q4XNYzfyyt1u-K-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-13" value="Solicitar criterio y valor de búsqueda" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2600" y="410" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5eMGE5Q4XNYzfyyt1u-K-14" target="5eMGE5Q4XNYzfyyt1u-K-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-14" value="Leer &quot;articulos.txt&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2600" y="515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5eMGE5Q4XNYzfyyt1u-K-15" value="Iterar y comparar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2600" y="610" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
