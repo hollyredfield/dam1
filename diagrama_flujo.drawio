@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-15T10:19:55.581Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="VRbWuCJmPOp-ks_loftY" version="22.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-15T10:29:46.369Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="tbVXRlDsPEp4kZRvd_PN" version="22.1.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1114" dy="578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -133,20 +133,62 @@
         <mxCell id="VLlErGUeabO-Wsx0XHVg-49" value="Imprimir mensaje" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="800" y="740" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VLlErGUeabO-Wsx0XHVg-50" value="Añadir cliente a la lista en memoria" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-50" value="Añadir a la lista en memoria" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="800" y="840" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-53" value="VERARTICULOS()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1040" y="370" width="120" height="30" as="geometry" />
+          <mxGeometry x="1020" y="370" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-54" value="leer &quot;articulos.txt&quot;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1050" y="410" width="120" height="70" as="geometry" />
+          <mxGeometry x="1030" y="400" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-55" value="Iterar sobre las líneas y mostrar información" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1050" y="515" width="120" height="60" as="geometry" />
+          <mxGeometry x="1030" y="500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VLlErGUeabO-Wsx0XHVg-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.45;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-54" target="VLlErGUeabO-Wsx0XHVg-55">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-57" value="ELIMINAR_ARTICULO(ARTICULOS)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1200" y="370" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-58" target="VLlErGUeabO-Wsx0XHVg-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-58" value="Mostrar lista de articulos" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="400" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-59" target="VLlErGUeabO-Wsx0XHVg-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-59" value="Solicitar ID al eliminar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-61" target="VLlErGUeabO-Wsx0XHVg-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-61" value="Leer &quot;articulos.txt&quot; y escribir líneas sin el cliente a eliminar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-63" target="VLlErGUeabO-Wsx0XHVg-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-63" value="Actualiza lista en memoria&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-66" target="VLlErGUeabO-Wsx0XHVg-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-66" value="Solicitar criterio y valor de búsqueda&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VLlErGUeabO-Wsx0XHVg-67" target="VLlErGUeabO-Wsx0XHVg-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-67" value="Leer articulos.txt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VLlErGUeabO-Wsx0XHVg-70" value="Iterar y comparar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1250" y="960" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
