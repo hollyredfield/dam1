@@ -19,4 +19,4 @@ def quickSort(arr, low, high):
 
         # Ordenar los elementos a la izquierda y a la derecha del pivote
         quickSort(arr, low, pi-1)
-        quickSort(arr, pi+1, high)
+        quickSort(arr, pi+1, high) 
