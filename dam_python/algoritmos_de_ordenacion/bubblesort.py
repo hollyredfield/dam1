@@ -13,3 +13,4 @@ def bubbleSort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]  # Intercambiar
 
     return arr  # Devolver el array ordenado
+#ordena por número pares de izquierda a derecha, y va comparando de nuevo los números desde el principio, si el primero es mayor que el seguno, les da la vuelta hasta dejar los números mayores al final.
