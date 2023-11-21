@@ -10,3 +10,11 @@ def selectionSort(arr):
         # Intercambiamos el elemento mínimo encontrado con el primer elemento
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr  # Devolvemos el array ordenado
+# Ejemplo de lista
+lista = [64, 25, 12, 22, 11, 90]
+
+# Ordenamos la lista utilizando el algoritmo de selección
+lista_ordenada = selectionSort(lista)
+
+# Imprimimos la lista ordenada
+print(lista_ordenada)

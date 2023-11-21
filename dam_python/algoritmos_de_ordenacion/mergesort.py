@@ -26,3 +26,11 @@ def mergeSort(arr):
             j+=1
             k+=1
     return arr  # Devolvemos el array ordenado
+# Ejemplo de lista desordenada
+arr = [12, 11, 13, 5, 6, 7]
+
+# Ordenamos la lista utilizando el algoritmo merge sort
+sorted_arr = mergeSort(arr)
+
+# Imprimimos la lista ordenada
+print(sorted_arr)

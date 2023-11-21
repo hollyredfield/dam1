@@ -11,3 +11,7 @@ def insertionSort(arr):
                 j -= 1
         arr[j+1] = key
     return arr  # Devolvemos el array ordenado
+# Ejemplo de uso
+lista = [4, 3, 2, 10, 12, 1, 5, 6]
+lista_ordenada = insertionSort(lista)
+print(lista_ordenada)

@@ -10,3 +10,8 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr  # Devolvemos el array ordenado
+# Ejemplo de uso
+ejemplo_lista = [64, 34, 25, 12, 22, 11, 90]
+lista_ordenada = bubbleSort(ejemplo_lista)
+print("Lista original:", ejemplo_lista)
+print("Lista ordenada:", lista_ordenada)

@@ -20,3 +20,8 @@ def quickSort(arr, low, high):
         quickSort(arr, low, pi-1)
         quickSort(arr, pi+1, high)
     return arr  # Devolvemos el array ordenado
+# Example usage
+arr = [10, 7, 8, 9, 1, 5]
+print("Original array:", arr)
+sorted_arr = quickSort(arr, 0, len(arr)-1)
+print("Sorted array:", sorted_arr)
