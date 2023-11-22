@@ -11,4 +11,25 @@
 - La ordenación debe realizarse mediante una función 
 
 Todas las funciones estarán en un módulo llamado funciones.py """
-import random.randint(1,50)
+import random
+
+def generar_numeros():
+    numeros = random.sample(range(1, 51), 20)
+    return numeros
+
+def lista_desordenada(numeros):
+    generar_numeros()
+    try:
+        with open("lista_desordenada.txt", "a") as file:
+            for numero in numeros:
+                file.write(str(numero) + "," + "\n")
+                print(f"{numero} renerated correctly")
+    except FileNotFoundError:
+        print("Error generating numbers")
+    return numeros
+
+lista_desordenada(generar_numeros())
+
+
+
+
