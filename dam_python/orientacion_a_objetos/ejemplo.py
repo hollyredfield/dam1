@@ -102,3 +102,8 @@ biblioteca.prestar_libro("123456789", "001")
 
 
 # Intentar prestar el mismo libro a otro usuario
+resultado = biblioteca.prestar_libro("123456789", "002")  # Esto debería fallar, ya que el libro está prestado
+
+
+# Devolver el libro
+usuario1.devolver_libro(libro1)
