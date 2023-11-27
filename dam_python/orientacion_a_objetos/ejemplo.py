@@ -21,10 +21,13 @@ class Libro:
 
     def devolver(self):
         self.prestado = False
+        
 """ 
-Aquí, Libro encapsula propiedades como titulo, autor, y isbn. Los métodos prestar y devolver cambian el estado del libro (abstracción y encapsulamiento).
+Aquí, Libro encapsula propiedades como titulo, autor, y isbn. Los métodos prestar y devolver cambian el estado del libro 
+(abstracción y encapsulamiento).
 Clase Usuario 
 """
+
 class Usuario:
     def __init__(self, nombre, identificacion):
         self.nombre = nombre
@@ -45,10 +48,12 @@ class Usuario:
             self.libros_prestados.remove(libro)
             return True
         return False
+    
 """ 
 La clase Usuario gestiona los libros prestados a cada usuario, demostrando encapsulamiento y abstracción.
 Clase Biblioteca 
 """
+
 class Biblioteca:
     def __init__(self):
         self.libros = []
@@ -70,10 +75,12 @@ class Biblioteca:
         if libro and usuario:
             return usuario.tomar_prestado(libro)
         return False
+    
 """
 Paso 4: Demostración del Uso de la Aplicación
 Crearemos algunos libros y usuarios y realizaremos operaciones de préstamo. 
 """
+
 # Creando libros y usuarios
 libro1 = Libro("El Principito", "Antoine de Saint-Exupéry", "123456789")
 libro2 = Libro("1984", "George Orwell", "987654321")
