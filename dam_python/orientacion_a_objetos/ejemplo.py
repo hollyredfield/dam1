@@ -9,7 +9,7 @@ class Libro:
         self.titulo = titulo
         self.autor = autor
         self.isbn = isbn
-        self.prestado = False
+        self.prestado = False # Estado inicial del libro
 
 
     def prestar(self):
