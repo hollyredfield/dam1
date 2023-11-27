@@ -22,5 +22,13 @@ def generar_numeros_aleatorios():
     numeros = [] 
     while len(numeros) <10:
         numero = random.randint(1, 10)
-        numeros.append(numero)
+        if numero not in numeros:
+            numeros.append(numero)
     print(numeros)
+generar_numeros_aleatorios()
+def lista_desordenada():
+    try:
+        with open("listadesornedada.txt", "a") as file:
+            
+    except FileNotFoundError:
+        print("Error al generar los números al archivo")
