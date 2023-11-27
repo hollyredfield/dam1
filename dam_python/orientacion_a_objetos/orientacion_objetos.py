@@ -18,9 +18,11 @@ class Libro:
 
     def leer(self):
         print(f"Leyendo {self.paginas} páginas de {self.titulo}.")
+
 mi_libro = Libro("Cien Años de Soledad", "Gabriel García Márquez", 417)
 mi_libro.abrir()
 mi_libro.leer()
+
 class Persona:
     """
     Clase que representa a una persona.
@@ -28,18 +30,16 @@ class Persona:
 
     especie = 'Homo sapiens'  # Atributo de clase
 
-
     def __init__(self, nombre, edad):
         self.nombre = nombre    # Atributo de instancia
         self.edad = edad        # Atributo de instancia
-
 
     def presentarse(self):
         """
         Método que imprime un mensaje de presentación de la persona.
         """
         print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
-        #Instanciar un objeto de la clase persona:
+
 empleado1 = Persona("Pepe", 24)
 empleado2 = Persona("Juan",32)
 empleado1.presentarse()
@@ -63,7 +63,6 @@ class CuentaBancaria:
         self.titular = titular
         self.__saldo = saldo_inicial  # Saldo es un atributo privado
 
-
     def depositar(self, cantidad):
         """
         Realiza un depósito en la cuenta bancaria.
@@ -80,7 +79,6 @@ class CuentaBancaria:
         else:
             print("Cantidad inválida.")
 
-
     def ver_saldo(self):
         """
         Devuelve el saldo actual de la cuenta bancaria.
@@ -89,6 +87,7 @@ class CuentaBancaria:
         - float: El saldo actual de la cuenta bancaria.
         """
         return self.__saldo
+
 class CuentaAhorro(CuentaBancaria):
     """
     Clase que representa una cuenta de ahorro en un banco.
@@ -105,7 +104,6 @@ class CuentaAhorro(CuentaBancaria):
     def __init__(self, titular, saldo_inicial, tasa_interes):
         super().__init__(titular, saldo_inicial)
         self.tasa_interes = tasa_interes
-
 
     def acumular_interes(self):
         """
