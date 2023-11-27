@@ -22,8 +22,9 @@ class Pelicula:
         self.clasificacion = clasificacion
     def visualizar(self):
         print(f"Titulo: {self.titulo}")
-    de buscar(self, titulo, director):
+    def buscar(self, titulo, director):
         if self.titulo == titulo or self director == director:
             return True
         return False
+    def eliminar(self, ) 
     
