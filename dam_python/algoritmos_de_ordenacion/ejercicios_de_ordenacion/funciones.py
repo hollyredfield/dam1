@@ -31,7 +31,9 @@ def generar_numeros():
 
 def lista_desordenada():
     try:
-        with open("lista_desordenada.txt", "a")
+        with open("lista_desordenada.txt", "a") as file:
+            file.write()
+            
     except FileNotFoundError:
         print(Error al generar la lista.)
         
