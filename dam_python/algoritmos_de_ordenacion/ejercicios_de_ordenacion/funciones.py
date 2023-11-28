@@ -28,7 +28,7 @@ def lista_desordenada(numeros):
         print("Error generating numbers")
     return numeros
 
-lista_desordenada(generar_numeros())
+lista_desordenada(generar_numeros()
 
 
 
