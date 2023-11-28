@@ -19,7 +19,7 @@ class Pelicula:
         def __init__(self, titulo, director, duracion, clasificacion):
             self.titulo = titulo
             self.director = director
-            self.duracion = duracion
+            self.duracion = duracion 
             self.clasificacion = clasificacion
         
         def visualizar(self):
