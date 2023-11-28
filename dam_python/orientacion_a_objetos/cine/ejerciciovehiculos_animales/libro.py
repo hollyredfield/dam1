@@ -27,7 +27,14 @@ class Libro:
             if self.titulo == titulo or self.autor == autor or self.genero == genero or self.edicion == edicion or self.isbn == isbn:
                 return True
             return False
-        def prestado(self):
+        def prestar(self):
+            if not self.prestado:
+                self.prestado = True
+                return True
+            return False
+        def devuelto(self):
+            self.prestado = False
+             
             
             
             
