@@ -22,6 +22,7 @@ class Libro:
     def devolver(self):
         self.prestado = False
         
+        
 """ 
 Aquí, Libro encapsula propiedades como titulo, autor, y isbn. Los métodos prestar y devolver cambian el estado del libro 
 (abstracción y encapsulamiento).
