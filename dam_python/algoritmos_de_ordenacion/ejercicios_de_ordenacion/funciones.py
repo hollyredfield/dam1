@@ -17,7 +17,7 @@ def generar_numeros():
     import random
     numeros = []
     try:
-        while len(numeros) <50:
+        while len(numeros) <20:
             numero = random.randint(1, 50)
             if numero not in numeros:
                 numeros.append(numero)
@@ -25,18 +25,18 @@ def generar_numeros():
         
     except ValueError:
         print("Error al generar números.")
-    return None
+    return numeros
     
     
 
 def lista_desordenada():
-    try:
-        with open("lista_desordenada.txt", "a") as file:
-            file.write()
-            
-    except FileNotFoundError:
-        print(Error al generar la lista.)
+    with open("lista_desordenada.txt", "a") as file:
+        numeros = generar_numeros()
+        file.write(str(numeros) + "\n")
+
+def bubblesort():
+    
+        
         
     
-
 
