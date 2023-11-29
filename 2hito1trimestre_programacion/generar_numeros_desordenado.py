@@ -25,14 +25,16 @@ def generar_numeros_aleatorios():
         if numero not in numeros:
             numeros.append(numero)
     print(numeros)
+    return numeros
 
 def lista_desordenada():
     numeros= generar_numeros_aleatorios()
     try:
         with open("listadesornedada.txt", "a") as file:
             for numero in numeros:
-                file.write(str(numero) + "\n")
+                file.write(str(numero) + "," + " ")
             
             
     except FileNotFoundError:
         print("Error al generar los números al archivo")
+    return numeros
