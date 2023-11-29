@@ -13,4 +13,4 @@ lista_ordenada = bubblesort(lista_desordenada())
 
 with open("lista_ordenada.txt", "w") as file:
     for numero in lista_ordenada:
-        file.write(str(numero) + "\n")
+        file.write(str(numero) + "," + " ")
