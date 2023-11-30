@@ -26,7 +26,7 @@ def shellSort(numeros):
         gap //= 2  # Reduce a la mitad el tamaño del espacio
         print(numeros)  # Imprime la lista en cada iteración del algoritmo
     return numeros  # Retorna la lista de números ordenada
-def ordenar_bubble():  # Define la función ordenar_bubble que no toma ningún argumento.
+def ordenar_sort():  # Define la función ordenar_bubble que no toma ningún argumento.
     numeros = shellSort(lista_desordenada())  # Llama a la función lista_desordenada para obtener una lista desordenada, luego la ordena usando la función shellSort y guarda el resultado en numeros.
     try:  # Intenta ejecutar el siguiente bloque de código.
         with open("lista_ordenada_shellsort.txt", "a") as file:  # Abre (o crea si no existe) el archivo lista_ordenada_shellsort.txt en modo de añadir.
@@ -36,4 +36,4 @@ def ordenar_bubble():  # Define la función ordenar_bubble que no toma ningún a
     except FileNotFoundError:  # Si se produce un error FileNotFoundError durante la ejecución del bloque de código try...
         print("Error al ordenar el array. ")  # ...imprime "Error al ordenar el array. ".
     return numeros  # Devuelve la lista ordenada.
-ordenar_bubble()
+ordenar_sort()
