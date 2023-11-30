@@ -17,24 +17,27 @@ implementarlo (se puede implementar la versión recursiva o iterativa) en PSeint
 pseudocódigo. Analiza su eficiencia 
 """ 
 
+
+# Definición de la función "generar_numeros_aleatorios"
 def generar_numeros_aleatorios():
     import random
-    numeros = [] 
-    while len(numeros) <10:
-        numero = random.randint(1, 10)
-        if numero not in numeros:
-            numeros.append(numero)
-    print(numeros)
-    return numeros
+    numeros = []  # Creación de una lista vacía para almacenar los números generados
+    while len(numeros) < 10:  # Mientras la lista no tenga 10 elementos
+        numero = random.randint(1, 10)  # Generar un número aleatorio entre 1 y 10
+        if numero not in numeros:  # Si el número no está en la lista
+            numeros.append(numero)  # Agregar el número a la lista
+    print(numeros)  # Imprimir la lista de números generados
+    return numeros  # Devolver la lista de números generados
 
+# Definición de la función "lista_desordenada"
 def lista_desordenada():
-    numeros= generar_numeros_aleatorios()
+    numeros = generar_numeros_aleatorios()  # Llamar a la función "generar_numeros_aleatorios" y almacenar el resultado en la variable "numeros"
     try:
-        with open("listadesornedada.txt", "a") as file:
-            for numero in numeros:
-                file.write(str(numero) + "," + " ")
-            
-            
+        with open("listadesornedada.txt", "a") as file:  # Abrir el archivo "listadesornedada.txt" en modo de escritura (append)
+            for numero in numeros:  # Para cada número en la lista de números generados
+                file.write(str(numero) + "," + " ")  # Escribir el número en el archivo, separado por una coma y un espacio
+        print(numeros)  # Imprimir la lista de números generados
     except FileNotFoundError:
-        print("Error al generar los números al archivo")
-    return numeros
+        print("Error al generar los números al archivo")  # Imprimir un mensaje de error si ocurre una excepción de archivo no encontrado
+    return numeros  # Devolver la lista de números generados
+
