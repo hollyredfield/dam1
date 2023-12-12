@@ -90,9 +90,30 @@ class Lector:
         except mysql.connector.Error as error:
             print("Error al eliminar el lector. ", error)
             return None
-peter = Lector()
+    def buscar_lector(self):
+        try:
+            id_lector = input("Introduce el ID del lector a buscar: ")
+
+            conexion = Conexion()
+            conexion.conexion_bdd()
+            cursor = conexion.conexion.cursor()
+            query = "SELECT * FROM lectores WHERE id_lector = %s"
+            valores = (id_lector,)
+            cursor.execute(query, valores)
+            registro = cursor.fetchone()
+            if registro is not None:
+                print(registro)
+            else:
+                print("No se encontró ningún lector con el ID proporcionado.")
+            conexion.cerrar_conexion_bdd()
+        except mysql.connector.Error as error:
+            print("Error al buscar el lector. ", error)
+            return None
+
 #peter.modificar_lector(1) #se pone el id en el paréntesis que se quiere modificar
 #peter.eliminar_lector()
+
+""" 
 class Menu:
     def __init__(self):
         self.lector = Lector()
@@ -102,7 +123,8 @@ class Menu:
         print("2. Ver lectores")
         print("3. Modificar lector")
         print("4. Eliminar lector")
-        print("5. Salir")
+        print("5. buscar")
+        print("6.")
 
     def ejecutar_opcion(self, opcion):
         if opcion == 1:
@@ -115,9 +137,11 @@ class Menu:
         elif opcion == 4:
             self.lector.eliminar_lector()
         elif opcion == 5:
+            self.lector.buscar_lector()
+        elif opcion == 6:
             print("Saliendo del programa...")
         else:
-            print("Opción no válida. Por favor, elige una opción del 1 al 5.")
+            print("Opción no válida. Por favor, elige una opción del 1 al 6.")
 
 def main():
     menu = Menu()
@@ -125,8 +149,9 @@ def main():
         menu.mostrar_menu()
         opcion = int(input("Elige una opción: "))
         menu.ejecutar_opcion(opcion)
-        if opcion == 5:
+        if opcion == 6:
             break
 
 if __name__ == "__main__":
-    main()
+    main()  
+"""
