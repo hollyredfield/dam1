@@ -19,4 +19,8 @@ class Conexion:
             self.conexion.close()
             print("Conexión cerrada con éxito")
 
+xd = Conexion()
+xd.conexion_bdd()
+xd.cerrar_conexion_bdd()
 
+#xd
