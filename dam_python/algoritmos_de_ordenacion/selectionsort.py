@@ -17,4 +17,5 @@ lista = [64, 25, 12, 22, 11, 90]
 lista_ordenada = selectionSort(lista)
 
 # Imprimimos la lista ordenada
-print(lista_ordenada)
+print(lista_ordenada) 
+
